@@ -1,0 +1,11 @@
+.nav-item a {
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 1em;
+    color: rgb(0, 0, 0);
+    transition: 0.5s;
+}
+
+.nav-item a:hover {
+    color: rgb(0, 8, 255);
+}

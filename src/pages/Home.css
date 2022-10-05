@@ -1,0 +1,30 @@
+html {
+    background-color: rgb(255, 255, 255);
+}
+
+.light {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+    text-align: center;
+}
+
+.light span {
+    font-weight: bold;
+}
+
+.adjust {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.light h3 {
+    font-weight: bold;
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

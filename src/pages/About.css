@@ -1,0 +1,16 @@
+.other-color {
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-bottom: 5em;
+    background-color: rgb(75, 75, 75);
+    border-radius: 5em;
+}
+
+.space i{
+    padding: 1em;
+    cursor: pointer;
+}
+
+i:hover {
+    color: gold;
+}

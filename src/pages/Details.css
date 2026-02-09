@@ -1,0 +1,126 @@
+.details-page {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+}
+
+.back-link-container {
+    margin-bottom: 30px;
+}
+
+.back-link {
+    color: var(--gray-text);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--primary-color);
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.details-image-section {
+    position: relative;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.detail-img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.detail-tags {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.detail-intro {
+    color: var(--gray-text);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.detail-price-card {
+    margin-bottom: 30px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.price-label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.price-value {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin: 5px 0;
+}
+
+.price-installment {
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+.price-installment strong {
+    color: #fff;
+}
+
+.detail-description h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.detail-description p {
+    color: var(--gray-text);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.detail-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-lg {
+    padding: 15px 30px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}

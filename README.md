@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# NewGo Car - Premium Automotive Store
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NewGo Car is a modern, responsive React application for a premium car dealership. It features a high-end "Dark Neon" design, an extensive vehicle catalog, and a realistic financing simulator.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+### 🎨 Premium Design System
+- **Dark Neon Theme**: A sophisticated dark mode (`#0f172a`) with neon accents (`#6366f1`, `#ec4899`) and glassmorphism effects.
+- **Responsive Layout**: Fully responsive design that works seamlessly on desktop, tablet, and mobile.
+- **Animations**: Subtle hover effects, transitions, and meaningful micro-interactions.
 
-### `npm start`
+### 🚗 Vehicle Catalog
+- **Grid View**: A dynamic grid displaying available vehicles with high-quality images.
+- **Details Page**: Comprehensive product pages showing specs (category, seats, description) and financing estimates.
+- **Shared Data**: Centralized vehicle data management for consistency.
 
-Runs the app in the development mode.\
+### 💰 Financing Simulator
+- **Real-time Calculation**: Simulates monthly installments based on input values.
+- **Market Rules**: Includes estimated taxes (IOF) and fees (TAC) for realistic results.
+- **Price Table (Tabela Price)**: Uses standard amortization formulas.
+- **Currency Masking**: Smart input fields that automatically format currency values for better UX.
+
+## 🛠️ Technologies
+
+- **React.js**: Frontend library for building user interfaces.
+- **CSS3 Variables**: For consistent theming and easy maintenance.
+- **React Router**: For client-side routing.
+- **Intl API**: For native currency formatting.
+
+## 📦 Getting Started
+
+### Prerequisites
+- Node.js installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/newgo-car.git
+   ```
+2. Navigate to the project folder:
+   ```bash
+   cd loja-de-carros-novo
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the App
+
+Runs the app in the development mode.
+```bash
+npm start
+```
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📂 Project Structure
 
-### `npm test`
+- `src/components`: Reusable UI components (Navbar, Footer).
+- `src/pages`: Main application views (Home, Catalog, Details, Financiamento).
+- `src/data`: Static data files (cars.js).
+- `src/img`: Image assets.
+- `src/App.css`: Global styles and design tokens.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed with 💜 by KimInfoDeveloper

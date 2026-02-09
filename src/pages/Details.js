@@ -1,94 +1,81 @@
-import React from 'react'
-
-// img
-import loading from '../img/loading.gif'
-
-// link
-import { Link } from 'react-router-dom'
-
-// hooks
-import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
+import { carsData } from '../data/cars'
+import './Details.css'
 
 const Details = () => {
+    const { id } = useParams()
+    const car = carsData[parseInt(id)];
 
-  let { id } = useParams()
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [id]);
 
+    if (!car) {
+        return (
+            <div className="details-container container">
+                <div className="error-message">
+                    <h2>Carro não encontrado</h2>
+                    <Link to="/catalog" className="btn-neon">Voltar ao Catálogo</Link>
+                </div>
+            </div>
+        )
+    }
 
-  const [nameCar] = useState([
-    'Audi A3 2022',
-    'Lancer Evolution 2022',
-    'Golf GTI 2022',
-    'Skyline 2088',
-    'Subaru 2022',
-    'Jesko 2022',
-    'Aventador 2022',
-    'LaFerrari 2022'
-  ])
+    const formatCurrency = (val) => new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(val);
 
-  const [descriptionCar] = useState([
-    'Uma máquina que combina potência e elegância ao mesmo tempo.',
-    'Motor boxer, esse sedan vai te fazer voar, com a mais alta tecnologia da Mitsubishi.',
-    'Confortável e com uma potência incrível, esse hatch vai te levar aonde quiser.',
-    'Para os amantes de velozes e furiosos, temos essa lenda de Brian Oconner o famoso Skyline.',
-    'Caso queira um carro para Off-road temos o mais alto nível do WRC.',
-    'O Koenigsegg Jesko é uma homenangem ao pai de Christian von Koenigsegg ele criou essa máquina que mistura potência com elegância.',
-    'Aventador é o super com a melhor estética existente, potência, elgância, aerodinâmica...',
-    'A clássica La Ferrari, com seu vermelho vibrante e seu charme incrível, você não irá deixar ninguém ver a sua sombra.'
-  ])
+    return (
+        <div className="details-page">
+            <div className="details-container container">
+                {/* Back Button */}
+                <div className="back-link-container">
+                    <Link to="/catalog" className="back-link">
+                        <i className="bi bi-arrow-left"></i> Voltar ao Catálogo
+                    </Link>
+                </div>
 
-  const [priceCar] = useState([
-    'Preço: R$220.000,00',
-    'Preço: R$280.000,00',
-    'Preço: R$180.000,00',
-    'Preço: R$320.000,00',
-    'Preço: R$200.000,00',
-    'Preço: R$2.800.000,00',
-    'Preço: R$1.800.000,00',
-    'Preço: R$2.500.000,00'
-  ])
+                <div className="details-grid">
+                    {/* Left Column: Image */}
+                    <div className="details-image-section card-glass">
+                        <img src={car.img} alt={car.title} className="detail-img" />
+                        <div className="detail-tags">
+                            <span className="tag">{car.category}</span>
+                            <span className="tag">{car.seats}</span>
+                        </div>
+                    </div>
 
-  const [categoryCar] = useState([
-    'Sedan',
-    'Sedan',
-    'Hacth',
-    'Esportivo',
-    'Sedan',
-    'Esportivo Luxuoso',
-    'Esportivo Luxuoso',
-    'Esportivo Luxuoso'
-  ])
+                    {/* Right Column: Info */}
+                    <div className="details-info-section">
+                        <h1 className="detail-title">{car.title}</h1>
+                        <p className="detail-intro">{car.desc}</p>
+                        
+                        <div className="detail-price-card card-glass">
+                            <span className="price-label">Preço à vista</span>
+                            <h2 className="price-value">{formatCurrency(car.price)}</h2>
+                            <p className="price-installment">
+                                ou entrada de <strong>{formatCurrency(car.price * 0.2)}</strong> <br/>
+                                + 48x de <strong>{formatCurrency(((car.price * 0.8) * 1.025) / 48 * 1.5)}</strong>*
+                            </p>
+                        </div>
 
-  const [spaceCar] = useState([
-    '5 lugares',
-    '5 lugares',
-    '5 lugares',
-    '4 lugares',
-    '5 lugares',
-    '2 lugares',
-    '2 lugares',
-    '2 lugares'
-  ])
+                        <div className="detail-description">
+                            <h3>Sobre o Veículo</h3>
+                            <p>{car.details || car.desc}</p>
+                        </div>
 
-
-  return (
-    <div className="container-fluid bg-dark">
-
-      <div className="row">
-        <div className="col-12 card">
-          <img className='img-fluid adjust-img' src={loading} />
-          <h1 className='light'>{nameCar[id]}</h1>
-          <p className='light'>{descriptionCar[id]}</p>
-          <p className='light'>{priceCar[id]}</p>
-          <p className='light'>{categoryCar[id]}
-            <br />
-            {spaceCar[id]}
-          </p>
-          <button className='btn btn-light'><Link to="/catalog">Voltar ao catálogo</Link></button>
+                        <div className="detail-actions">
+                            <Link to="/finan" className="btn-neon btn-lg">
+                                Simular Financiamento
+                            </Link>
+                            <Link to="/contactus" className="btn-outline-neon btn-lg">
+                                Falar com Vendedor
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default Details

@@ -4,19 +4,46 @@ import './Footer.css'
 
 const Footer = () => {
     return (
-        <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div className="col-md-4 d-flex align-items-center">
-                <a className="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <img className='opacity' src={newgologo} alt="Logo da empresa" height="45px" width="45px" />
-                </a>
-                <span className="mb-3 mb-md-0 text-muted">since &copy; 2022 NewCar, Inc</span>
-            </div>
+        <footer className="footer-custom">
+            <div className="container footer-content">
+                <div className="footer-brand">
+                    <img src={newgologo} alt="NewGo Car" />
+                    <span>NewGo<span className="highlight">Car</span></span>
+                    <p className="footer-tagline">Acelere seus sonhos com a melhor taxa do mercado.</p>
+                </div>
+                
+                <div className="footer-links">
+                    <div className="link-group">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/catalog">Catálogo</a></li>
+                            <li><a href="/finan">Simulação</a></li>
+                        </ul>
+                    </div>
+                    <div className="link-group">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="/contactus">Fale Conosco</a></li>
+                            <li><a href="/about">Sobre Nós</a></li>
+                            <li><a href="/login">Área do Cliente</a></li>
+                        </ul>
+                    </div>
+                </div>
 
-            <ul className="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li className="ms-3"><a className="text-muted" href="#"><i className="bi bi-facebook"></i></a></li>
-                <li className="ms-3"><a className="text-muted" href="#"><i className="bi bi-whatsapp"></i></a></li>
-                <li className="ms-3"><a className="text-muted" href="#"><i className="bi bi-instagram"></i></a></li>
-            </ul>
+                <div className="footer-social">
+                    <h4>Siga-nos</h4>
+                    <div className="social-icons">
+                         <a href="#"><i className="bi bi-facebook"></i></a>
+                         <a href="#"><i className="bi bi-whatsapp"></i></a>
+                         <a href="#"><i className="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div className="footer-bottom">
+                 <p>&copy; 2026 NewGo Car, Inc. Todos os direitos reservados.</p>
+            </div>
         </footer>
     )
 }

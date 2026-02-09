@@ -1,48 +1,83 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Home.css'
+import { Link } from 'react-router-dom'
 
 // img
 import audia3 from '../img/audia3.webp'
-import golfgti from '../img/golfgti.jpg'
-import lancerevo from '../img/lancerevo.jpg'
-import skyline from '../img/skyline.jpg'
-import { Link } from 'react-router-dom'
-
+import laferrari from '../img/laferrari.jpg'
+import jesko from '../img/jesko.jpg'
 
 const Home = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
-        <div className="container-fluid bg-dark">
-            <h1 className="light">Bem vindo a <span>NewGo Car</span></h1>
-            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={audia3} className="d-block w-100" alt="Audi A3" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={golfgti} className="d-block w-100" alt="Golf GTI" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={lancerevo} className="d-block w-100" alt="Lancer Evolution" />
-                    </div>
-                    <div className="carousel-item">
-                        <img src={skyline} className="d-block w-100" alt="Lancer Evolution" />
+        <div className="home-container">
+            {/* Hero Section */}
+            <section className="hero-section">
+                <div className="hero-overlay"></div>
+                <div className="hero-content container">
+                    <span className="hero-badge">Novidades 2026</span>
+                    <h1 className="hero-title">
+                        A excelência em <br />
+                        <span className="text-gradient">Carros Esportivos</span>
+                    </h1>
+                    <p className="hero-description">
+                        Descubra a combinação perfeita de performance, design e luxo. 
+                        Sua jornada para a velocidade começa aqui.
+                    </p>
+                    <div className="hero-buttons">
+                        <Link to="/catalog" className="btn-neon">Ver Catálogo</Link>
+                        <Link to="/finan" className="btn-outline-neon">Simular Financiamento</Link>
                     </div>
                 </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
-            </div>
-            <h3 className='light'>Aqui você encontrará o melhor carro esportivo da atualidade!</h3>
-            <div className='container adjust'>
-                <p className='light'>Verifique a disponibilidade dos veiculos aqui <i className="bi bi-arrow-right"> </i> 
-                <button className='btn btn-light'><Link to="/catalog">Clique aqui</Link></button>
-                </p>
-            </div>
+            </section>
+
+            {/* Featured Section (formerly Carousel equivalent) */}
+            <section className="featured-section container">
+                <div className="section-header">
+                    <h2>Destaques da Semana</h2>
+                    <p>As máquinas mais desejadas do momento.</p>
+                </div>
+                
+                <div className="featured-grid">
+                    <div className="featured-card">
+                        <img src={audia3} alt="Audi A3" />
+                        <div className="card-content">
+                            <h3>Audi A3 2022</h3>
+                            <p>Tecnologia e conforto.</p>
+                        </div>
+                    </div>
+                    <div className="featured-card">
+                        <img src={laferrari} alt="LaFerrari" />
+                        <div className="card-content">
+                            <h3>LaFerrari</h3>
+                            <p>Ícone de velocidade.</p>
+                        </div>
+                    </div>
+                    <div className="featured-card">
+                        <img src={jesko} alt="Jesko" />
+                        <div className="card-content">
+                            <h3>Koenigsegg Jesko</h3>
+                            <p>O hipercarro definitivo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="cta-section">
+                <div className="container">
+                    <div className="cta-card card-glass">
+                        <div className="cta-content">
+                            <h2>Pronto para acelerar?</h2>
+                            <p>Não perca tempo sonhando. Faça uma simulação e veja como é fácil ter o carro dos seus sonhos.</p>
+                            <Link to="/finan" className="btn-neon">Fazer Simulação Agora <i className="bi bi-arrow-right"></i></Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     )
 }

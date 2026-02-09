@@ -46,9 +46,9 @@ const About = () => {
                             Siga-nos nas redes sociais e fique por dentro das últimas novidades do mundo automotivo.
                         </p>
                         <div className="social-links-large">
-                            <a href="#" className="social-btn"><i className="bi bi-whatsapp"></i></a>
-                            <a href="#" className="social-btn"><i className="bi bi-facebook"></i></a>
-                            <a href="#" className="social-btn"><i className="bi bi-instagram"></i></a>
+                            <a href="https://whatsapp.com" target="_blank" rel="noreferrer" className="social-btn"><i className="bi bi-whatsapp"></i></a>
+                            <a href="https://facebook.com" target="_blank" rel="noreferrer" className="social-btn"><i className="bi bi-facebook"></i></a>
+                            <a href="https://instagram.com" target="_blank" rel="noreferrer" className="social-btn"><i className="bi bi-instagram"></i></a>
                         </div>
                     </div>
                 </div>

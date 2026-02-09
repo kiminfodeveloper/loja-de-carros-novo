@@ -45,7 +45,7 @@ const Login = () => {
                                 </div>
                                 <button type="submit" className="btn-primary-glow full-width">Entrar</button>
                                 <p className="auth-footer">
-                                    Esqueceu sua senha? <a href="#">Recuperar</a>
+                                    Esqueceu sua senha? <a href="/recuperar-senha">Recuperar</a>
                                 </p>
                             </form>
                         ) : (

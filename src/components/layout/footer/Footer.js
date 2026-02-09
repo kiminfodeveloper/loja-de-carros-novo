@@ -34,9 +34,9 @@ const Footer = () => {
                 <div className="footer-social">
                     <h4>Siga-nos</h4>
                     <div className="social-icons">
-                         <a href="#"><i className="bi bi-facebook"></i></a>
-                         <a href="#"><i className="bi bi-whatsapp"></i></a>
-                         <a href="#"><i className="bi bi-instagram"></i></a>
+                         <a href="https://facebook.com" target="_blank" rel="noreferrer"><i className="bi bi-facebook"></i></a>
+                         <a href="https://whatsapp.com" target="_blank" rel="noreferrer"><i className="bi bi-whatsapp"></i></a>
+                         <a href="https://instagram.com" target="_blank" rel="noreferrer"><i className="bi bi-instagram"></i></a>
                     </div>
                 </div>
             </div>
